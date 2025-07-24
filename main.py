@@ -15,7 +15,7 @@ async def calculate_age(update: Update, context: ContextTypes.DEFAULT_TYPE):
         age = today.year - birth_date.year - (
             (today.month, today.day) < (birth_date.month, birth_date.day)
         )
-        await update.message.reply_text(f"📅 Your age is: {age} years")
+        await update.message.reply_text(f"📅 Your age is: {age} years, months , days")
     except (IndexError, ValueError):
         await update.message.reply_text("❌ Please use the correct format: /age YYYY-MM-DD")
 
